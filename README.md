@@ -7,7 +7,7 @@ Example Vue 3 app demonstrating CountriesDB widget integration with Vue Router. 
 This example demonstrates:
 - Using the CountriesDB widget with Vue 3 and Vue Router
 - Handling widget reload when navigating between routes
-- Setting up environment variables for the public key and backend URL
+- Setting up environment variables for the public key
 - Creating multiple routes with country and subdivision selects
 
 ## Getting Started
@@ -20,7 +20,6 @@ npm install
 2. Create a `.env` file in the root directory:
 ```bash
 VITE_COUNTRIESDB_PUBLIC_KEY=YOUR_PUBLIC_KEY
-VITE_COUNTRIESDB_BACKEND_URL=
 ```
 
 3. Run the development server:
@@ -45,11 +44,9 @@ import { onMounted } from 'vue'
 
 onMounted(() => {
   const publicKey = import.meta.env.VITE_COUNTRIESDB_PUBLIC_KEY
-  const backendUrl = import.meta.env.VITE_COUNTRIESDB_BACKEND_URL
 
   ;(window as any).CountriesDBConfig = {
     publicKey,
-    ...(backendUrl && { backendUrl }),
   }
 
   // Reload widget when navigating to this route
