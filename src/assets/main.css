@@ -1,0 +1,12 @@
+@import './base.css';
+
+/* Ensure select elements and options have visible text */
+select {
+  color: #1f2937;
+  background-color: white;
+}
+
+select option {
+  color: #1f2937;
+  background-color: white;
+}
