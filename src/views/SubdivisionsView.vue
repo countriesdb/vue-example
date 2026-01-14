@@ -34,7 +34,7 @@ onMounted(() => {
 
   // Reload widget when navigating to this route
   if ((window as any).CountriesWidgetLoad) {
-    ;(window as any).CountriesWidgetLoad({ reload: true })
+    (window as any).CountriesWidgetLoad({ reload: true })
   } else {
     import('@countriesdb/widget')
   }
